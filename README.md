@@ -42,13 +42,6 @@ go build
 
 <br/>
 
-## Documentation (Swagger)
-[url_go]: https://dexa-training-golang-jefri.herokuapp.com/swagger "Swagger from Golang"
-
-> [https://dexa-training-golang-jefri.herokuapp.com/swagger][url_go]
-
----
-
 ## NodeJS Version
 [url_nodejs]:     https://dexa.jefriherditriyanto.com/swagger     "Swagger from NodeJS"
 
