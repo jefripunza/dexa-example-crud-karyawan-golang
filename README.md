@@ -43,6 +43,8 @@ go build
 <br/>
 
 ## NodeJS Version
-[url_nodejs]:     https://dexa.jefriherditriyanto.com/swagger     "Swagger from NodeJS"
+[url_nodejs]:          https://dexa.jefriherditriyanto.com/swagger              "Swagger from NodeJS"
+[url_nodejs_git_repo]: https://github.com/jefripunza/dexa-example-crud-karyawan "Swagger from NodeJS"
 
 > [https://dexa.jefriherditriyanto.com/swagger][url_nodejs]
+> [https://github.com/jefripunza/dexa-example-crud-karyawan][url_nodejs_git_repo]

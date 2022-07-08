@@ -28,7 +28,6 @@
   "schemes": ["https"],
   "consumes": ["application/json"],
   "produces": ["application/json"],
-
   "paths": {
     "/token/new": {
       "get": {
