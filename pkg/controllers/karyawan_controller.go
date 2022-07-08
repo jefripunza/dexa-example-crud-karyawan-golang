@@ -47,7 +47,7 @@ func CreateKaryawan(c *fiber.Ctx) error {
 	})
 }
 
-// CreateBook func for creates a new book.
+// menampilkan list karyawan (pagination)
 func ShowKaryawanPagination(c *fiber.Ctx) error {
 	// ambil parameter dari endpoint
 	show, err := strconv.Atoi(c.Params("show"))
@@ -109,7 +109,7 @@ func ShowKaryawanPagination(c *fiber.Ctx) error {
 	return c.JSON(pagination)
 }
 
-// CreateBook func for creates a new book.
+// update karyawan
 func UpdateKaryawan(c *fiber.Ctx) error {
 	// setup DTO
 	karyawan := &entities.Karyawan{}
@@ -131,7 +131,7 @@ func UpdateKaryawan(c *fiber.Ctx) error {
 		})
 	}
 
-	// Update book by given ID.
+	// Update karyawan by given ID.
 	if err := db.UpdateKaryawan(karyawan.ID, karyawan); err != nil {
 		// Return status 500 and error message.
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
@@ -145,7 +145,7 @@ func UpdateKaryawan(c *fiber.Ctx) error {
 	})
 }
 
-// CreateBook func for creates a new book.
+// menghapus karyawan
 func DeleteKaryawan(c *fiber.Ctx) error {
 	payload := &dto.RequestDelete{}
 
@@ -166,7 +166,7 @@ func DeleteKaryawan(c *fiber.Ctx) error {
 		})
 	}
 
-	// Update book by given ID.
+	// Delete karyawan by given ID.
 	if err := db.DeleteKaryawan(payload); err != nil {
 		// Return status 500 and error message.
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{

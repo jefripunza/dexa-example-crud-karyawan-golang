@@ -11,12 +11,12 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-// KaryawanQueries struct for queries from Book model.
+// KaryawanQueries struct for queries from Karyawan model.
 type KaryawanQueries struct {
 	*sqlx.DB
 }
 
-// CreateBook method for creating book by given Book object.
+// query untuk menambahkan karyawan baru
 func (q *KaryawanQueries) CreateKaryawan(karyawan *entities.Karyawan) error {
 	// Define query string.
 	query := `INSERT INTO karyawan (phone_number, email, password, name, dob, address, religion, gender, marital_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
@@ -32,9 +32,9 @@ func (q *KaryawanQueries) CreateKaryawan(karyawan *entities.Karyawan) error {
 	return nil
 }
 
-// GetBooks method for getting all books.
+// query untuk menampilkan list data karyawan (pagination)
 func (q *KaryawanQueries) GetKaryawanPagination(show int, page int, order_by string, keyword string, keyword_skip bool) ([]entities.Karyawan, int, int, int, int, error) {
-	// Define books variable.
+	// Define karyawan variable.
 	var karyawan []entities.Karyawan
 
 	test, err := q.Query("SELECT * FROM karyawan")
